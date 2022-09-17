@@ -6,11 +6,19 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro check && tsc --noEmit && astro build",
     "preview": "astro preview",
+    "deploy": "gh-pages -d build",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.2.5"
+    "@astrojs/solid-js": "^1.1.0",
+    "@astrojs/tailwind": "^2.0.1",
+    "astro": "^1.2.5",
+    "solid-js": "^1.4.3",
+    "tailwindcss": "^3.0.24"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
